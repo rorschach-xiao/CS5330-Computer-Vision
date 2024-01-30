@@ -57,7 +57,7 @@ class Segmentation:
         edges_sobel = cv2.Sobel(img_gray, cv2.CV_64F, dx, dy, ksize)
         edge_map = cv2.convertScaleAbs(edges_sobel)
 
-        # fill the top/left/right boarder of the edge map with 255
+        # fill the top/left/right borders of the edge map with 255
         edge_map[0,:] = 255
         edge_map[:, 0] = 255
         edge_map[:,-1] = 255
