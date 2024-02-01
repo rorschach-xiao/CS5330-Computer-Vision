@@ -71,7 +71,7 @@ def infernece(original_img, sky_img, seg_func_name):
     # replace sky area
     result = original_img * (1 - sky_mask) + sky_img_resize * sky_mask
 
-    return result
+    return [np.repeat(sky_mask,3, axis=2) * 255, result]
 
 
 if __name__ == '__main__':

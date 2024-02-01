@@ -18,7 +18,10 @@ demo = gr.Interface(
         gr.Image(type="numpy", sources='upload', label='sky image'),
         gr.CheckboxGroup(["Edge Detection", "HSV Thresholding"], label="Segmentation Methods", info="Choose one function"),\
     ],
-    outputs=["image"],
+    outputs=[
+        gr.Image(type="numpy", label='predicted mask'),
+        gr.Image(type="numpy", label='final image')
+    ],
     title='Sky Replacement Demo',
     examples=examples,
 )
