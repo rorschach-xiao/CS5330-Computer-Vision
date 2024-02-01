@@ -1,3 +1,9 @@
+---
+title: sky-replacement-demo
+app_file: app.py
+sdk: gradio
+sdk_version: 4.15.0
+---
 # Lab 01 Sky Pixel Identification
 
 ## Intro
