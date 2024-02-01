@@ -54,7 +54,8 @@ def eval(seg_func=core_func.Segmentation.EdgeDetectionSegment):
 
 # sky replacement inference
 def infernece(original_img, sky_img, seg_func_name):
-    if seg_func_name == 'HSV Thresholding':
+    print(seg_func_name)
+    if seg_func_name[0] == 'HSV Thresholding':
         seg_func = core_func.Segmentation.HSVThresholdingSegment
     else:
         seg_func = core_func.Segmentation.EdgeDetectionSegment
